@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import ErrorBoundary from './components/ErrorBoundary';
-import Analytics from './components/Analytics';
+import CustomAnalytics from './components/Analytics';
 import MuscadineBanner from './components/MuscadineBanner';
 import MuscadineFooter from './components/MuscadineFooter';
 import ScrollToTop from './components/ScrollToTop';
@@ -21,7 +22,8 @@ const TermsPage = lazy(() => import('./components/TermsPage'));
 function App() {
   return (
     <ErrorBoundary>
-      <Analytics pageName="defi-dashboard" />
+      <Analytics />
+      <CustomAnalytics pageName="defi-dashboard" />
       <Router>
         <ScrollToTop />
         <div className="min-h-screen bg-gray-50 flex flex-col">
