@@ -76,13 +76,7 @@ export default function MuscadineFooter() {
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                X
-              </a>
-              <a 
-                href="mailto:muscadinelabs@gmail.com"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                muscadinelabs@gmail.com
+                Twitter (X)
               </a>
             </div>
           </div>

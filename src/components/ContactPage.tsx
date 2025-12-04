@@ -71,36 +71,6 @@ export default function ContactPage() {
             </div>
             <span className="text-white font-medium">X</span>
           </a>
-
-          {/* Nicholas Personal Website */}
-          <a 
-            href="https://nickconnelly.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-purple-50 hover:bg-purple-100 rounded-lg p-6 flex items-center space-x-3 transition-colors duration-200"
-          >
-            <div className="w-8 h-8 flex items-center justify-center">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-              </svg>
-            </div>
-            <span className="text-gray-900 font-medium">nickconnelly.com</span>
-          </a>
-
-          {/* Ignas Personal Website */}
-          <a 
-            href="https://ignaspanavas.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-50 hover:bg-green-100 rounded-lg p-6 flex items-center space-x-3 transition-colors duration-200"
-          >
-            <div className="w-8 h-8 flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-              </svg>
-            </div>
-            <span className="text-gray-900 font-medium">ignaspanavas.com</span>
-          </a>
         </div>
       </div>
     </div>
