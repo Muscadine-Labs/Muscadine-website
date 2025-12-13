@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import IsometricNodes from './IsometricNodes';
 import PolyhedronShape from './3DShapes/PolyhedronShape';
 import StarShape from './3DShapes/StarShape';
@@ -17,25 +17,7 @@ const CountUpAnimation = ({ target, duration = 2000, suffix = '', prefix = '' }:
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-          startCountUp();
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
-  const startCountUp = () => {
+  const startCountUp = useCallback(() => {
     const startTime = Date.now();
     const animate = () => {
       const elapsed = Date.now() - startTime;
@@ -55,7 +37,25 @@ const CountUpAnimation = ({ target, duration = 2000, suffix = '', prefix = '' }:
     };
     
     requestAnimationFrame(animate);
-  };
+  }, [duration, target]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          startCountUp();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible, startCountUp]);
 
   const formatNumber = (num: number) => {
     if (num >= 1000000) {

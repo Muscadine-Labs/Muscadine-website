@@ -11,11 +11,12 @@ const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     const scene = new THREE.Scene();
 
-    const aspect = containerRef.current.clientWidth / containerRef.current.clientHeight;
+    const aspect = container.clientWidth / container.clientHeight;
     const frustumSize = 4;
     const camera = new THREE.OrthographicCamera(
       (frustumSize * aspect) / -2,
@@ -34,11 +35,11 @@ const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
       alpha: true,
       powerPreference: 'high-performance'
     });
-    renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     // Lighting
     const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.6);
@@ -170,8 +171,8 @@ const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
       window.removeEventListener('mouseup', onMouseUp);
       cancelAnimationFrame(animationFrameId);
       document.body.style.cursor = 'default';
-      if (containerRef.current) {
-        containerRef.current.removeChild(renderer.domElement);
+      if (container) {
+        container.removeChild(renderer.domElement);
       }
       renderer.dispose();
       geometry.dispose();

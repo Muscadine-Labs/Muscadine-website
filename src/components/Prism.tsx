@@ -333,8 +333,8 @@ const Prism: React.FC<PrismProps> = ({
 
     let onPointerMove: ((e: PointerEvent) => void) | null = null;
     if (animationType === 'hover') {
-      onPointerMove = (e: PointerEvent) => {
-        onMove(e);
+      onPointerMove = (_e: PointerEvent) => {
+        onMove(_e);
         startRAF();
       };
       window.addEventListener('pointermove', onPointerMove, { passive: true });
@@ -421,7 +421,7 @@ const Prism: React.FC<PrismProps> = ({
       stopRAF();
       ro.disconnect();
       if (animationType === 'hover') {
-        if (onPointerMove) window.removeEventListener('pointermove', onPointerMove as EventListener);
+        if (onPointerMove) window.removeEventListener('pointermove', onPointerMove);
         window.removeEventListener('mouseleave', onLeave);
         window.removeEventListener('blur', onBlur);
       }

@@ -8,7 +8,7 @@ export default function NodePage() {
     try {
       await navigator.clipboard.writeText(text);
       // You could add a toast notification here if desired
-    } catch (err) {
+    } catch {
       // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = text;

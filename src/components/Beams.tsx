@@ -23,7 +23,7 @@ type ShaderWithDefines = THREE.ShaderLibShader & {
 };
 
 function extendMaterial<T extends THREE.Material = THREE.Material>(
-  BaseMaterial: new (params?: THREE.MaterialParameters) => T,
+  BaseMaterial: new (_params?: THREE.MaterialParameters) => T,
   cfg: ExtendMaterialConfig
 ): THREE.ShaderMaterial {
   const physical = THREE.ShaderLib.physical as ShaderWithDefines;

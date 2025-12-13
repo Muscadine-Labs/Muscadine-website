@@ -5,14 +5,15 @@ const IsometricNodes = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     // Scene setup
     const scene = new THREE.Scene();
     // Transparent background (no background color)
 
     // Isometric camera setup
-    const aspect = containerRef.current.clientWidth / containerRef.current.clientHeight;
+    const aspect = container.clientWidth / container.clientHeight;
     const frustumSize = 10; // Increased to provide more space
     const camera = new THREE.OrthographicCamera(
       (frustumSize * aspect) / -2,
@@ -33,9 +34,9 @@ const IsometricNodes = () => {
       alpha: true,
       powerPreference: 'high-performance'
     });
-    renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Cap at 2 for performance
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
@@ -173,8 +174,8 @@ const IsometricNodes = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
-      if (containerRef.current) {
-        containerRef.current.removeChild(renderer.domElement);
+      if (container) {
+        container.removeChild(renderer.domElement);
       }
       renderer.dispose();
       octagonGeometry.dispose();

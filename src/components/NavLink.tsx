@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
+import type { ReactNode } from 'react';
 
 interface NavLinkProps {
   to: string;
-  children: React.ReactNode;
+  children: ReactNode;
   onClick?: () => void;
   variant?: 'desktop' | 'mobile';
 }
