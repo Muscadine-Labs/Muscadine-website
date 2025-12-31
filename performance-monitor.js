@@ -8,7 +8,7 @@ const performanceMonitor = {
     // Monitor memory usage
     if ('memory' in performance) {
       setInterval(() => {
-        const memory = (performance as any).memory;
+        const memory = performance.memory;
         console.log(`💾 Memory Usage:`, {
           used: `${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1024 / 1024)}MB`,
