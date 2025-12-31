@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import * as THREE from 'three';
 
 interface PolyhedronShapeProps {
@@ -8,7 +10,7 @@ interface PolyhedronShapeProps {
 
 const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -119,7 +121,7 @@ const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
         const dragDistance = dragStartMouse.distanceTo(mouse);
 
         if (dragDuration < 200 && dragDistance < 0.1) {
-          navigate(path);
+          router.push(path);
         }
       }
 
@@ -178,7 +180,7 @@ const PolyhedronShape = ({ path }: PolyhedronShapeProps) => {
       geometry.dispose();
       material.dispose();
     };
-  }, [path, navigate]);
+  }, [path, router]);
 
   return (
     <div

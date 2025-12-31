@@ -1,10 +1,12 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import * as THREE from 'three';
 
 const SolutionsGlobes = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -205,7 +207,7 @@ const SolutionsGlobes = () => {
         if (dragDuration < 200 && dragDistance < 0.1) {
           const path = selectedBlob.userData.path;
           if (path) {
-            navigate(path);
+            router.push(path);
           }
         }
       }
@@ -294,7 +296,7 @@ const SolutionsGlobes = () => {
       lineGeometry.dispose();
       lineMaterial.dispose();
     };
-  }, [navigate]);
+  }, [router]);
 
   return (
     <div

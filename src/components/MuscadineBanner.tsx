@@ -1,5 +1,8 @@
+'use client';
+
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import HamburgerIcon from './HamburgerIcon';
 
 const MuscadineBanner = () => {
@@ -10,11 +13,14 @@ const MuscadineBanner = () => {
       <div className="w-full px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <img 
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <Image 
               src="/favicon.png" 
               alt="Muscadine Logo" 
+              width={32}
+              height={32}
               className="w-8 h-8"
+              priority
             />
             <span className="text-xl font-semibold text-gray-900">Muscadine</span>
           </Link>
@@ -22,21 +28,21 @@ const MuscadineBanner = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
             <Link
-              to="/"
+              href="/"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
               Home
             </Link>
             
             <Link
-              to="/about"
+              href="/about"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
               About Us
             </Link>
             
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
               Contact
@@ -55,7 +61,7 @@ const MuscadineBanner = () => {
             </a>
             
             <Link
-              to="/solutions"
+              href="/solutions"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
               Solutions
@@ -79,7 +85,7 @@ const MuscadineBanner = () => {
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
               <Link
-                to="/"
+                href="/"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
@@ -87,7 +93,7 @@ const MuscadineBanner = () => {
               </Link>
               
               <Link
-                to="/about"
+                href="/about"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
@@ -95,7 +101,7 @@ const MuscadineBanner = () => {
               </Link>
               
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
@@ -116,7 +122,7 @@ const MuscadineBanner = () => {
               </a>
               
               <Link
-                to="/solutions"
+                href="/solutions"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >

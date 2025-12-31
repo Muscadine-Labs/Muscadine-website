@@ -1,4 +1,7 @@
-import { Link, useLocation } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
 
 interface NavLinkProps {
@@ -9,8 +12,8 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ to, children, onClick, variant = 'desktop' }: NavLinkProps) => {
-  const location = useLocation();
-  const isActive = location.pathname === to;
+  const pathname = usePathname();
+  const isActive = pathname === to;
 
   const baseClasses = "text-sm font-medium transition-colors";
   
@@ -20,7 +23,7 @@ const NavLink = ({ to, children, onClick, variant = 'desktop' }: NavLinkProps) =
   };
 
   return (
-    <Link to={to} onClick={onClick} className={classes[variant]}>
+    <Link href={to} onClick={onClick} className={classes[variant]}>
       {children}
     </Link>
   );

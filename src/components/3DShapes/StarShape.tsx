@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import * as THREE from 'three';
 
 interface StarShapeProps {
@@ -8,7 +10,7 @@ interface StarShapeProps {
 
 const StarShape = ({ path }: StarShapeProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -198,7 +200,7 @@ const StarShape = ({ path }: StarShapeProps) => {
         const dragDistance = dragStartMouse.distanceTo(mouse);
 
         if (dragDuration < 200 && dragDistance < 0.1) {
-          navigate(path);
+          router.push(path);
         }
       }
 
@@ -257,7 +259,7 @@ const StarShape = ({ path }: StarShapeProps) => {
       geometry.dispose();
       material.dispose();
     };
-  }, [path, navigate]);
+  }, [path, router]);
 
   return (
     <div

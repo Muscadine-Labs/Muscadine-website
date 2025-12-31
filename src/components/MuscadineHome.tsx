@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState, useRef, useCallback } from 'react';
 import IsometricNodes from './IsometricNodes';
 import PolyhedronShape from './3DShapes/PolyhedronShape';

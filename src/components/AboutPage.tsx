@@ -1,4 +1,6 @@
+'use client';
 
+import Image from 'next/image';
 
 const AboutPage = () => {
   return (
@@ -33,10 +35,13 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="flex items-center justify-center">
-              <img 
+              <Image 
                 src="/IMG_6794.jpeg" 
                 alt="Muscadine Mission" 
+                width={800}
+                height={600}
                 className="w-full h-auto rounded-lg shadow-lg"
+                priority
               />
             </div>
           </div>
@@ -88,11 +93,12 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Team Member 1 */}
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-gray-400 transition-all duration-300">
-            <div className="mx-auto mb-6 h-64 w-64 overflow-hidden rounded-lg">
-                    <img 
+            <div className="mx-auto mb-6 h-64 w-64 overflow-hidden rounded-lg relative">
+                    <Image 
                       src="/Nicholas.connelly.headshot.jpg" 
                       alt="Nicholas Connelly" 
-                      className="h-full w-full object-cover object-top" 
+                      fill
+                      className="object-cover object-top" 
                     />
                   </div>
               <h3 className="text-2xl font-light text-gray-900 mb-2 font-serif">Nicholas Connelly</h3>
@@ -115,11 +121,12 @@ const AboutPage = () => {
 
             {/* Team Member 2 */}
             <div className="bg-white border-2 border-gray-200 rounded-lg p-8 text-center hover:border-gray-400 transition-all duration-300">
-                  <div className="mx-auto mb-6 h-64 w-64 overflow-hidden rounded-lg">
-                    <img 
+                  <div className="mx-auto mb-6 h-64 w-64 overflow-hidden rounded-lg relative">
+                    <Image 
                       src="/Ignas.panavas.headshot.jpg" 
                       alt="Ignas Panavas" 
-                      className="h-full w-full object-cover object-top scale-150" 
+                      fill
+                      className="object-cover object-top scale-150" 
                     />
                   </div>
               <h3 className="text-2xl font-light text-gray-900 mb-2 font-serif">Ignas Panavas</h3>

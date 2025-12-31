@@ -1,62 +1,41 @@
-# Muscadine - Financial Self-Sovereignty
+# Muscadine Interface
 
-A professional platform dedicated to helping individuals take control of their financial future through Bitcoin security, self-custody, and DeFi solutions.
+Next.js application for Muscadine - Financial self-sovereignty platform.
 
-## Our Solutions
+## Tech Stack
 
-- Bitcoin Security & Self-Custody
-- Decentralized Finance (DeFi) 
-- Bitcoin Node Access
-- Crypto Resources & Educational Content
+- **Framework**: Next.js 16.1.1 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **3D Graphics**: Three.js, React Three Fiber
+- **Analytics**: Vercel Analytics, Sentry
 
-## Quick Start
-
-### Installation
+## Development
 
 ```bash
-git clone https://github.com/Muscadine-Labs/Muscadine-Interface.git
-cd Muscadine-Interface
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
 Visit [http://localhost:3002](http://localhost:3002)
 
-### Production Build
+## Build
 
 ```bash
 npm run build
+npm start
 ```
-
-Output will be in the `dist/` directory.
 
 ## Project Structure
 
-- `src/components/` — React UI components
-- `src/types/` — TypeScript type definitions
-- `public/` — Static assets
-- `index.html` — Main HTML entry point
+- `app/` - Next.js pages and layout
+- `src/components/` - React components
+- `public/` - Static assets
 
-## Deployment
+## Links
 
-- Deploys as a static site
-- Vercel is pre-configured via `vercel.json`
-- Automatic deployments triggered by Git updates
-
-## Muscadine Platform
-
-- **Main Site**: `https://muscadine.io`
-- **Web App**: `https://app.muscadine.io/`
-
-## Company Information
-
-- **Company**: Muscadine Labs LLC (Wyoming)
-- **Contact**: muscadinelabs@gmail.com
+- **Main Site**: https://muscadine.io
+- **Web App**: https://app.muscadine.io
 
 ## License
 

@@ -1,5 +1,7 @@
 
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 
 export default function NodePage() {
 
@@ -24,7 +26,7 @@ export default function NodePage() {
       {/* Back Arrow */}
       <div className="mb-6">
         <Link 
-          to="/solutions" 
+          href="/solutions" 
           className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

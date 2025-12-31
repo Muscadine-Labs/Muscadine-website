@@ -121,3 +121,74 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Mobile-specific optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mobile-smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+@supports (padding: max(0px)) {
+  .safe-area-padding {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 768px) {
+  p, li {
+    line-height: 1.6;
+  }
+  
+  .mobile-button-spacing {
+    margin-bottom: 0.75rem;
+  }
+  
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode-support {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .high-contrast-support {
+    border: 2px solid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ensure space for fixed mobile nav on small screens */
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 80px;
+  }
+}
+

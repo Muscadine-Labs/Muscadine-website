@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const PrivacyPage: React.FC = () => {
   return (
@@ -186,7 +188,7 @@ const PrivacyPage: React.FC = () => {
 
           <div className="mt-12 pt-8 border-t border-gray-200">
             <Link 
-              to="/" 
+              href="/" 
               className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const TermsPage: React.FC = () => {
   return (
@@ -258,7 +260,7 @@ const TermsPage: React.FC = () => {
 
           <div className="mt-12 pt-8 border-t border-gray-200">
             <Link 
-              to="/" 
+              href="/" 
               className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition-colors"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 
 interface AnalyticsProps {
@@ -25,7 +27,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
       };
 
       // Store in localStorage for debugging (remove in production)
-      if (import.meta.env.MODE === 'development') {
+      if (process.env.NODE_ENV === 'development') {
         console.log('Analytics:', data);
       }
 
@@ -48,7 +50,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
             timestamp: new Date().toISOString()
           };
 
-          if (import.meta.env.MODE === 'development') {
+          if (process.env.NODE_ENV === 'development') {
             console.log('Performance:', perfData);
           }
         }
@@ -75,7 +77,7 @@ const Analytics = ({ pageName = 'unknown' }: AnalyticsProps) => {
           timestamp: new Date().toISOString()
         };
 
-        if (import.meta.env.MODE === 'development') {
+        if (process.env.NODE_ENV === 'development') {
           console.log('Interaction:', interactionData);
         }
       }

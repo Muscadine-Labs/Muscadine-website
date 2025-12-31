@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function MuscadineFooter() {
   return (
@@ -18,19 +18,19 @@ export default function MuscadineFooter() {
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Navigation</h4>
             <nav className="space-y-2">
               <Link 
-                to="/"
+                href="/"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Home
               </Link>
               <Link 
-                to="/about"
+                href="/about"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 About Us
               </Link>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Contact
@@ -44,7 +44,7 @@ export default function MuscadineFooter() {
                 Docs
               </a>
               <Link 
-                to="/solutions"
+                href="/solutions"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Solutions
@@ -57,7 +57,7 @@ export default function MuscadineFooter() {
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Connect</h4>
             <div className="space-y-2">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Contact
@@ -94,13 +94,13 @@ export default function MuscadineFooter() {
                 App
               </a>
               <Link 
-                to="/self-custody"
+                href="/self-custody"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Self Custody
               </Link>
               <Link 
-                to="/node"
+                href="/node"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Node
@@ -113,19 +113,19 @@ export default function MuscadineFooter() {
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Legal</h4>
             <div className="space-y-2">
               <Link 
-                to="/privacy"
+                href="/privacy"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link 
-                to="/legal"
+                href="/legal"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Legal Disclaimer
               </Link>
               <Link 
-                to="/terms"
+                href="/terms"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Terms of Service

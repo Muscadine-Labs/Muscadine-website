@@ -1,4 +1,6 @@
-import * as React from 'react';
+'use client';
+
+import React from 'react';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -16,7 +18,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, Error
   }
 
   componentDidCatch() {
-    // Optionally log error to Sentry or similar
+    // Error logging can be added here if needed
     // console.error('Error caught in ErrorBoundary');
   }
 
