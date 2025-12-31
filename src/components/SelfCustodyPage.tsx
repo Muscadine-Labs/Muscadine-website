@@ -32,6 +32,10 @@ export default function SelfCustodyPage() {
   };
 
   // DeFi functions
+  const openMuscadine = () => {
+    window.open('https://app.muscadine.io', '_blank', 'noopener,noreferrer');
+  };
+
   const openAave = () => {
     window.open('https://app.aave.com/', '_blank', 'noopener,noreferrer');
   };
@@ -60,8 +64,8 @@ export default function SelfCustodyPage() {
     window.open('https://phantom.com/', '_blank', 'noopener,noreferrer');
   };
 
-  const openZerion = () => {
-    window.open('https://app.zerion.io/', '_blank', 'noopener,noreferrer');
+  const openDebank = () => {
+    window.open('https://debank.com/', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -150,7 +154,7 @@ export default function SelfCustodyPage() {
                 <li>Maintain 2+ backups in different physical locations</li>
                 <li>Run annual recovery drills to test your backups</li>
                 <li>Keep hardware devices updated and in good condition</li>
-                <li>Use Taproot addresses (bc1p...) for new Bitcoin deposits</li>
+                <li>Use Taproot (bc1p...) or Segwit (bc1q...) addresses for new Bitcoin deposits</li>
               </ul>
             </div>
           </div>
@@ -252,6 +256,20 @@ export default function SelfCustodyPage() {
                       <h4 className="text-lg font-medium text-gray-800 mb-2">Hot Wallet:</h4>
                       <p className="text-gray-700 mb-2">
                         Sparrow Wallet works well for both watch-only (cold) setups and live transactions. Mobile options like BlueWallet are convenient too.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-gray-800 mb-2">Address Types: Taproot & Segwit</h4>
+                      <p className="text-gray-700 mb-2">
+                        When creating new Bitcoin addresses, use <strong>Taproot addresses (bc1p...)</strong> for new Bitcoin deposits. 
+                        Taproot offers enhanced privacy, lower transaction fees, and improved security.
+                      </p>
+                      <ul className="text-gray-700 space-y-1 ml-4 list-disc mb-2">
+                        <li><strong>Taproot (bc1p...):</strong> Latest standard, best privacy and efficiency</li>
+                        <li><strong>Segwit (bc1q...):</strong> Previous standard, still widely supported</li>
+                      </ul>
+                      <p className="text-gray-700 text-sm italic">
+                        Most modern wallets like Sparrow Wallet default to Taproot addresses. Always verify your wallet is generating bc1p... addresses for new deposits.
                       </p>
                     </div>
                     <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
@@ -471,6 +489,39 @@ export default function SelfCustodyPage() {
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white border border-green-200 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Muscadine</h3>
+                  <p className="text-gray-600 mb-4">Curated Morpho vaults with managed risk</p>
+                  <div className="space-y-2">
+                    <p className="text-sm text-gray-500">• Uses Morpho vaults to curate risk</p>
+                    <p className="text-sm text-gray-500">• Secure yield on USDC, Bitcoin, and Ethereum</p>
+                    <p className="text-sm text-gray-500">• Industry-low fees</p>
+                    <p className="text-sm text-gray-500">• Flexible deposits/withdrawals</p>
+                  </div>
+                  <button 
+                    onClick={openMuscadine}
+                    className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
+                  >
+                    Launch Muscadine App
+                  </button>
+                </div>
+                
+                <div className="bg-white border border-green-200 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Morpho</h3>
+                  <p className="text-gray-600 mb-4">Peer-to-peer lending with better rates</p>
+                  <div className="space-y-2">
+                    <p className="text-sm text-gray-500">• P2P lending model</p>
+                    <p className="text-sm text-gray-500">• Better rates than traditional AMMs</p>
+                    <p className="text-sm text-gray-500">• Available on multiple networks</p>
+                  </div>
+                  <button 
+                    onClick={openMorpho}
+                    className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
+                  >
+                    Open Morpho
+                  </button>
+                </div>
+                
                 <div className="bg-white border border-blue-200 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Aave</h3>
                   <p className="text-gray-600 mb-4">Leading lending protocol with multiple networks</p>
@@ -500,22 +551,6 @@ export default function SelfCustodyPage() {
                     className="w-full mt-4 bg-purple-100 text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors"
                   >
                     Open Moonwell
-                  </button>
-                </div>
-                
-                <div className="bg-white border border-green-200 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Morpho</h3>
-                  <p className="text-gray-600 mb-4">Peer-to-peer lending with better rates</p>
-                  <div className="space-y-2">
-                    <p className="text-sm text-gray-500">• P2P lending model</p>
-                    <p className="text-sm text-gray-500">• Better rates than traditional AMMs</p>
-                    <p className="text-sm text-gray-500">• Available on multiple networks</p>
-                  </div>
-                  <button 
-                    onClick={openMorpho}
-                    className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
-                  >
-                    Open Morpho
                   </button>
                 </div>
               </div>
@@ -614,8 +649,8 @@ export default function SelfCustodyPage() {
                 </div>
                 
                 <div className="bg-white border border-green-200 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Zerion</h3>
-                  <p className="text-gray-600 mb-4">DeFi portfolio management and trading</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">DeBank</h3>
+                  <p className="text-gray-600 mb-4">DeFi portfolio management</p>
                   <div className="space-y-2">
                     <p className="text-sm text-gray-500">• Portfolio tracking across chains</p>
                     <p className="text-sm text-gray-500">• Built-in DEX aggregator</p>
@@ -623,10 +658,10 @@ export default function SelfCustodyPage() {
                     <p className="text-sm text-gray-500">• Mobile and desktop apps</p>
                   </div>
                   <button 
-                    onClick={openZerion}
+                    onClick={openDebank}
                     className="w-full mt-4 bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
                   >
-                    Open Zerion
+                    Open DeBank
                   </button>
                 </div>
                 
@@ -634,8 +669,8 @@ export default function SelfCustodyPage() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Hardware Wallets</h3>
                   <p className="text-gray-600 mb-4">Maximum security for DeFi interactions</p>
                   <div className="space-y-2">
-                    <p className="text-sm text-gray-500">• Ledger (supports most DeFi)</p>
-                    <p className="text-sm text-gray-500">• Trezor (limited DeFi support)</p>
+                    <p className="text-sm text-gray-500">• Ledger</p>
+                    <p className="text-sm text-gray-500">• Trezor</p>
                     <p className="text-sm text-gray-500">• Works with software wallets</p>
                   </div>
                   <div className="mt-4 p-3 bg-yellow-50 rounded-lg">

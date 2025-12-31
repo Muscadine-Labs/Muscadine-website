@@ -42,29 +42,17 @@ const MuscadineBanner = () => {
             </Link>
             
             <Link
-              href="/contact"
-              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
-            >
-              Contact
-            </Link>
-            
-            <a
-              href="https://docs.muscadine.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
-            >
-              Docs
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-            
-            <Link
               href="/solutions"
               className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
             >
               Solutions
+            </Link>
+            
+            <Link
+              href="/contact"
+              className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+            >
+              Contact
             </Link>
           </nav>
 
@@ -101,32 +89,19 @@ const MuscadineBanner = () => {
               </Link>
               
               <Link
-                href="/contact"
-                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-              
-              <a
-                href="https://docs.muscadine.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Docs
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-              
-              <Link
                 href="/solutions"
                 className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 Solutions
+              </Link>
+              
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-sm justify-center px-4 py-2 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:outline-none transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
               </Link>
             </nav>
           </div>

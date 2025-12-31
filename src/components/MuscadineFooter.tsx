@@ -35,14 +35,6 @@ export default function MuscadineFooter() {
               >
                 Contact
               </Link>
-              <a 
-                href="https://docs.muscadine.io/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Docs
-              </a>
               <Link 
                 href="/solutions"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
@@ -131,12 +123,12 @@ export default function MuscadineFooter() {
                 Terms of Service
               </Link>
               <a 
-                href="https://github.com/Muscadine-Labs" 
+                href="https://docs.muscadine.io/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
               >
-                Open Source
+                Documentation
               </a>
             </div>
           </div>
@@ -147,7 +139,7 @@ export default function MuscadineFooter() {
             Education & security guidance only—no investment advice, no asset custody.
           </p>
           <p className="text-sm text-gray-400">
-            © 2025 Muscadine Labs LLC. All rights reserved.
+            © 2026 Muscadine Labs LLC. All rights reserved.
           </p>
         </div>
       </div>
