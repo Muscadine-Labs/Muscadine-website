@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function SelfCustodyPage() {
   const [mainTab, setMainTab] = useState<'about' | 'bitcoin' | 'defi'>('about');
-  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'explore' | 'wallet'>('about');
+  const [bitcoinTab, setBitcoinTab] = useState<'about' | 'explore' | 'wallet' | 'transfer'>('about');
   const [defiTab, setDefiTab] = useState<'about' | 'lending' | 'swap' | 'wallet'>('about');
 
   // Bitcoin functions
@@ -38,10 +38,6 @@ export default function SelfCustodyPage() {
 
   const openAave = () => {
     window.open('https://app.aave.com/', '_blank', 'noopener,noreferrer');
-  };
-
-  const openMoonwell = () => {
-    window.open('https://moonwell.fi/portfolio', '_blank', 'noopener,noreferrer');
   };
 
   const openMorpho = () => {
@@ -135,7 +131,7 @@ export default function SelfCustodyPage() {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Implementation Steps</h3>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <ol className="text-gray-700 space-y-2 list-decimal list-inside">
-                  <li><strong>Hardware Setup:</strong> Use SeedSigner or Coldcard for offline key generation</li>
+                  <li><strong>Hardware Setup:</strong> Use SeedSigner for offline key generation</li>
                   <li><strong>Master Seed Creation:</strong> Generate and securely backup your master seed phrase</li>
                   <li><strong>Child Derivation:</strong> Use BIP-85 to create child wallets for each family member</li>
                   <li><strong>Wallet Configuration:</strong> Connect to Sparrow Wallet for watch-only monitoring</li>
@@ -154,7 +150,7 @@ export default function SelfCustodyPage() {
                 <li>Maintain 2+ backups in different physical locations</li>
                 <li>Run annual recovery drills to test your backups</li>
                 <li>Keep hardware devices updated and in good condition</li>
-                <li>Use Taproot (bc1p...) or Segwit (bc1q...) addresses for new Bitcoin deposits</li>
+                <li>Use Segwit (bc1q...) addresses for new Bitcoin deposits</li>
               </ul>
             </div>
           </div>
@@ -222,6 +218,12 @@ export default function SelfCustodyPage() {
             >
               Wallet
             </button>
+            <button 
+              onClick={() => setBitcoinTab('transfer')} 
+              className={`px-6 py-3 font-medium text-base transition-all duration-200 whitespace-nowrap ${bitcoinTab === 'transfer' ? 'text-gray-900 border-b-2 border-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+            >
+              Transfer
+            </button>
           </div>
 
           {/* Bitcoin Sub-tab Content */}
@@ -259,17 +261,16 @@ export default function SelfCustodyPage() {
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-lg font-medium text-gray-800 mb-2">Address Types: Taproot & Segwit</h4>
+                      <h4 className="text-lg font-medium text-gray-800 mb-2">Address Types: Segwit</h4>
                       <p className="text-gray-700 mb-2">
-                        When creating new Bitcoin addresses, use <strong>Taproot addresses (bc1p...)</strong> for new Bitcoin deposits. 
-                        Taproot offers enhanced privacy, lower transaction fees, and improved security.
+                        When creating new Bitcoin addresses, use <strong>Segwit addresses (bc1q...)</strong> for new Bitcoin deposits. 
+                        Segwit offers improved efficiency and lower transaction fees compared to legacy addresses.
                       </p>
                       <ul className="text-gray-700 space-y-1 ml-4 list-disc mb-2">
-                        <li><strong>Taproot (bc1p...):</strong> Latest standard, best privacy and efficiency</li>
-                        <li><strong>Segwit (bc1q...):</strong> Previous standard, still widely supported</li>
+                        <li><strong>Segwit (bc1q...):</strong> Widely supported standard with better security and efficiency</li>
                       </ul>
                       <p className="text-gray-700 text-sm italic">
-                        Most modern wallets like Sparrow Wallet default to Taproot addresses. Always verify your wallet is generating bc1p... addresses for new deposits.
+                        Most modern wallets like Sparrow Wallet default to Segwit addresses. Always verify your wallet is generating bc1q... addresses for new deposits.
                       </p>
                     </div>
                     <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
@@ -292,6 +293,28 @@ export default function SelfCustodyPage() {
                 <p className="text-red-800 font-bold text-lg">
                   Not your keys, not your coins.
                 </p>
+              </div>
+            </div>
+          )}
+
+          {bitcoinTab === 'transfer' && (
+            <div>
+              <div className="max-w-md mx-auto">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Transfer on the Network</h3>
+                  <p className="text-gray-600 mb-4">
+                    Using an open source wallet like Sparrow, connect to a node to transact on the network.
+                  </p>
+                  <Link
+                    href="/node"
+                    className="inline-flex items-center justify-center w-full bg-blue-100 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors"
+                  >
+                    Connect to our Bitcoin Node
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
@@ -538,21 +561,6 @@ export default function SelfCustodyPage() {
                   </button>
                 </div>
                 
-                <div className="bg-white border border-purple-200 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Moonwell</h3>
-                  <p className="text-gray-600 mb-4">Lending protocol on Base network</p>
-                  <div className="space-y-2">
-                    <p className="text-sm text-gray-500">• Optimized for Base ecosystem</p>
-                    <p className="text-sm text-gray-500">• Competitive interest rates</p>
-                    <p className="text-sm text-gray-500">• User-friendly interface</p>
-                  </div>
-                  <button 
-                    onClick={openMoonwell}
-                    className="w-full mt-4 bg-purple-100 text-purple-800 px-4 py-2 rounded-lg hover:bg-purple-200 transition-colors"
-                  >
-                    Open Moonwell
-                  </button>
-                </div>
               </div>
             </div>
           )}

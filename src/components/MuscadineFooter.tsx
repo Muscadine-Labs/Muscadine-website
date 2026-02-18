@@ -139,7 +139,7 @@ export default function MuscadineFooter() {
             Education & security guidance only—no investment advice, no asset custody.
           </p>
           <p className="text-sm text-gray-400">
-            © 2026 Muscadine Labs LLC. All rights reserved.
+            © 2026 Muscadine Labs. All rights reserved.
           </p>
         </div>
       </div>

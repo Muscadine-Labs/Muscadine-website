@@ -93,25 +93,22 @@ const MuscadineHome = () => {
   return (
     <>
       {/* Hero Section - Full Width Background */}
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-20 overflow-x-hidden">
-        {/* Nested rectangles effect - hidden on mobile to prevent black line overflow */}
-        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-0">
-          
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-20 overflow-x-clip">
+        {/* Nested rectangles effect - hidden on mobile; frames step outward from main content on desktop */}
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-10 pointer-events-none">
+          {/* Rectangle 4 - outermost frame (wider than main content) */}
+          <div className="w-full max-w-[1240px] h-[780px] border-2 border-black rounded-lg" />
         </div>
-        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-10">
-          {/* Rectangle 4 */}
-          <div className="w-full max-w-[324px] h-[780px] border-2 border-black rounded-lg"></div>
-        </div>
-        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-20">
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-20 pointer-events-none">
           {/* Rectangle 3 */}
-          <div className="w-full max-w-[312px] h-[740px] border-2 border-black rounded-lg"></div>
+          <div className="w-full max-w-[1196px] h-[740px] border-2 border-black rounded-lg" />
         </div>
-        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-30">
-          {/* Rectangle 2 */}
-          <div className="w-full max-w-[300px] h-[700px] border-2 border-black rounded-lg"></div>
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-30 pointer-events-none">
+          {/* Rectangle 2 - innermost frame, fits around main content (1152px) */}
+          <div className="w-full max-w-[1168px] h-[700px] border-2 border-black rounded-lg" />
         </div>
         
-        {/* Main hero container */}
+        {/* Main hero container - max-w-6xl = 1152px, fits inside innermost frame */}
         <div className="relative py-8 px-4 sm:py-12 sm:px-8 lg:py-20 lg:px-20 mx-auto max-w-6xl border-2 border-black rounded-lg z-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
