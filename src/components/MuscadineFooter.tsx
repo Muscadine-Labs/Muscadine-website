@@ -4,7 +4,7 @@ export default function MuscadineFooter() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-lg font-light text-white mb-4 font-serif">Muscadine</h3>
@@ -100,6 +100,29 @@ export default function MuscadineFooter() {
             </div>
           </div>
           
+          {/* Resources - documentation & analytics */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Resources</h4>
+            <div className="space-y-2">
+              <a 
+                href="https://docs.muscadine.io/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Documentation
+              </a>
+              <a 
+                href="https://curator.muscadine.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Analytics
+              </a>
+            </div>
+          </div>
+          
           {/* Legal */}
           <div>
             <h4 className="text-sm font-medium text-white mb-4 uppercase tracking-wide">Legal</h4>
@@ -122,14 +145,6 @@ export default function MuscadineFooter() {
               >
                 Terms of Service
               </Link>
-              <a 
-                href="https://docs.muscadine.io/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Documentation
-              </a>
             </div>
           </div>
         </div>

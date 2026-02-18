@@ -347,36 +347,41 @@ const MuscadineHome = () => {
         </div>
       </div>
 
-      {/* Crypto Vault Section - Full Width Dark Blue Background with Slanted Top */}
+      {/* Analytics / Curator Section */}
       <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-x-hidden">
-        {/* PixelBlast OGL background with slanted top */}
         <div className="absolute inset-0 bg-gray-900" 
              style={{ clipPath: 'polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)' }}>
           <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <PixelBlast />
           </div>
         </div>
-        
-        <div className="relative py-24 md:py-40 lg:py-60 mt-12 md:mt-16">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-8 font-serif">
-            Introducing Our Crypto Vault
-          </h2>
-          <p className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-8">
-            Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morpho's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
-          </p>
-          
-          <a 
-            href="https://app.muscadine.io" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-12 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"
-          >
-            Try Out Our App
-            <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+        <div className="relative py-16 md:py-20 mt-12 md:mt-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl sm:text-3xl font-light text-white mb-4 font-serif">
+              Analytics &amp; Curator
+            </h2>
+            <p className="text-gray-200 leading-relaxed mb-6">
+              Explore metrics, dashboards, and curated insights at{' '}
+              <a 
+                href="https://curator.muscadine.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white font-medium underline underline-offset-2 hover:no-underline"
+              >
+                curator.muscadine.io
+              </a>
+            </p>
+            <a 
+              href="https://curator.muscadine.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
+            >
+              Open Curator
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
