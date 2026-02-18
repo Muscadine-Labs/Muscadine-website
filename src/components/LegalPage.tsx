@@ -171,7 +171,7 @@ const LegalPage: React.FC = () => {
               <li><strong>Tax Implications:</strong> Tax reporting requirements and potential tax liabilities</li>
               <li><strong>Risk Curation Limitations:</strong> Our risk curation does not eliminate these risks and cannot guarantee safety</li>
             </ul>
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded mt-4">
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-sm mt-4">
               <p className="text-red-800 font-semibold">
                 <strong>WARNING:</strong> Participation in DeFi protocols and non-custodial vaults can result in total loss of your assets. 
                 Never invest more than you can afford to lose.

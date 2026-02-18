@@ -24,7 +24,7 @@ const PrivacyPage: React.FC = () => {
               <li><strong>Communication Records:</strong> Correspondence related to our services, including risk curation consultations and support requests</li>
               <li><strong>Service Interaction Data:</strong> Information about your use of our services, such as which protocols or vaults you access through our platform (if applicable)</li>
             </ul>
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mt-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-sm mt-4">
               <p className="text-blue-800 font-semibold mb-2">Important Privacy Note:</p>
               <p className="text-blue-700">
                 We do <strong>not</strong> collect, store, or have access to your wallet private keys, seed phrases, or any digital assets. 
@@ -63,7 +63,7 @@ const PrivacyPage: React.FC = () => {
               <li>With service providers who assist in operating our services (under strict confidentiality agreements)</li>
               <li>In connection with a business transfer, merger, or acquisition (with notice to users)</li>
             </ul>
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded mt-4">
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-sm mt-4">
               <p className="text-yellow-800 font-semibold mb-2">Third-Party Protocols:</p>
               <p className="text-yellow-700">
                 When you interact with third-party DeFi protocols through our curated services, those protocols may collect 
@@ -86,7 +86,7 @@ const PrivacyPage: React.FC = () => {
               <li>Regular security assessments and updates</li>
               <li>Limited access to personal information on a need-to-know basis</li>
             </ul>
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded mt-4">
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-sm mt-4">
               <p className="text-red-800 font-semibold mb-2">Important Security Reminder:</p>
               <p className="text-red-700">
                 We never request your wallet private keys, seed phrases, or passwords. Never share these credentials with anyone, 
@@ -145,7 +145,7 @@ const PrivacyPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Service Disclaimers</h2>
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded mb-4">
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-sm mb-4">
               <p className="text-yellow-800 font-semibold mb-2">Risk Curation Services:</p>
               <p className="text-yellow-700 mb-4">
                 Our risk curation for non-custodial vaults involves evaluating protocols, assessing smart contract security, 

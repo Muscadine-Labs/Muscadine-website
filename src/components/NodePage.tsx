@@ -22,7 +22,7 @@ export default function NodePage() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+    <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-4 sm:p-8">
       {/* Back Arrow */}
       <div className="mb-6">
         <Link 
@@ -45,7 +45,7 @@ export default function NodePage() {
       
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Node Information */}
-        <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
+        <div className="bg-linear-to-r from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
           <h2 className="text-2xl font-bold text-orange-900 mb-4">About This Node</h2>
           <p className="text-orange-800 text-lg leading-relaxed mb-4">
             This is my personal Bitcoin node running 24/7 to support the Bitcoin network. By connecting to my node, you can:
@@ -79,10 +79,10 @@ export default function NodePage() {
           <div className="space-y-4">
             <div>
               <p className="text-sm text-gray-600 mb-2 font-medium">Electrum Server Hostname:</p>
-              <div className="flex items-center gap-2">
-                <code className="bg-gray-100 px-3 py-2 rounded text-sm flex-1 break-all font-mono">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <code className="bg-gray-100 px-3 py-2 rounded-sm text-sm min-w-0 break-all font-mono">lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion</code>
                 <button 
-                  className="bg-blue-600 text-white px-3 py-2 rounded text-sm hover:bg-blue-700 transition-colors" 
+                  className="bg-blue-600 text-white px-3 py-2 rounded-sm text-sm hover:bg-blue-700 transition-colors shrink-0 touch-manipulation" 
                   onClick={() => copyToClipboard('lyfocxl3fgg3if65jo32apupd2adzmm772vsqrtwpmdn4ndoug6gwnyd.onion')}
                 >
                   Copy
@@ -91,10 +91,10 @@ export default function NodePage() {
             </div>
             <div>
               <p className="text-sm text-gray-600 mb-2 font-medium">Port:</p>
-              <div className="flex items-center gap-2">
-                <span className="bg-gray-100 px-3 py-2 rounded text-sm font-mono">50001</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <span className="bg-gray-100 px-3 py-2 rounded-sm text-sm font-mono">50001</span>
                 <button 
-                  className="bg-green-600 text-white px-3 py-2 rounded text-sm hover:bg-green-700 transition-colors" 
+                  className="bg-green-600 text-white px-3 py-2 rounded-sm text-sm hover:bg-green-700 transition-colors shrink-0 touch-manipulation" 
                   onClick={() => copyToClipboard('50001')}
                 >
                   Copy

@@ -87,7 +87,7 @@ export default function RootLayout({
           <Analytics />
           <CustomAnalytics pageName="defi-dashboard" />
           <ScrollToTop />
-          <div className="min-h-screen bg-gray-50 flex flex-col">
+          <div className="min-h-screen bg-gray-50 flex flex-col overflow-x-hidden">
             <MuscadineBanner />
             <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8 w-full">
               {children}

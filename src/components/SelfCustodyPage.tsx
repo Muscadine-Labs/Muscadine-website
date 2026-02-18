@@ -69,7 +69,7 @@ export default function SelfCustodyPage() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+    <div className="bg-white rounded-lg shadow-xs border border-gray-200 p-4 sm:p-8">
       {/* Back Arrow */}
       <div className="mb-6">
         <Link 

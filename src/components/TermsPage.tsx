@@ -13,7 +13,7 @@ const TermsPage: React.FC = () => {
           </h1>
           <p className="text-gray-600 mb-8 text-center"><strong>Last updated:</strong> January 2026</p>
 
-          <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-8 rounded">
+          <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-8 rounded-sm">
             <p className="text-yellow-800 font-semibold">
               <strong>IMPORTANT DISCLAIMER:</strong> By using Muscadine's services, you acknowledge that all content is for educational and informational purposes only. We are not financial advisors or legal experts. Use of our services does not create any professional relationship.
             </p>
@@ -52,7 +52,7 @@ const TermsPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
               3. Risk Curation for Non-Custodial Vaults
             </h2>
-            <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-4 rounded">
+            <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-4 rounded-sm">
               <p className="text-blue-800 font-semibold mb-2">
                 <strong>OUR RISK CURATION SERVICE:</strong> Muscadine curates risk for non-custodial vault services by evaluating, assessing, and managing risks associated with DeFi protocols and smart contracts.
               </p>
@@ -70,7 +70,7 @@ const TermsPage: React.FC = () => {
               <li>Risk scoring and categorization of vault strategies</li>
               <li>Educational guidance on protocol risks and best practices</li>
             </ul>
-            <div className="bg-red-100 border-l-4 border-red-500 p-6 mb-4 rounded mt-6">
+            <div className="bg-red-100 border-l-4 border-red-500 p-6 mb-4 rounded-sm mt-6">
               <p className="text-red-800 font-semibold mb-2">
                 <strong>CRITICAL DISCLAIMER:</strong> Despite our risk curation efforts, non-custodial vault services involve significant risks including potential total loss of assets.
               </p>
@@ -95,7 +95,7 @@ const TermsPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
               4. Bitcoin Security and Self-Custody Risks
             </h2>
-            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded">
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded-sm">
               <p className="text-yellow-800 font-semibold">
                 <strong>SECURITY DISCLAIMER:</strong> Bitcoin self-custody involves significant security risks. 
                 We provide educational guidance only and are not responsible for security failures.
@@ -116,7 +116,7 @@ const TermsPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4 border-b-2 border-orange-500 pb-2">
               5. Frontend and Interface Risks
             </h2>
-            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded">
+            <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-4 rounded-sm">
               <p className="text-yellow-800 font-semibold">
                 <strong>INTERFACE DISCLAIMER:</strong> Our frontend interfaces may be vulnerable to attacks that could compromise user funds.
               </p>
