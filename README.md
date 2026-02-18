@@ -34,8 +34,7 @@ npm start
 
 ## Links
 
-- **Main Site**: https://muscadine.io
-- **Web App**: https://app.muscadine.io
+- **Main Site**: https://www.muscadine.io
 
 ## License
 
