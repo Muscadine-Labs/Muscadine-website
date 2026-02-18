@@ -23,13 +23,13 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Our Services</h2>
             <p className="text-gray-700 mb-4">
-              Muscadine provides comprehensive services focused on Bitcoin security, self-custody solutions, and decentralized finance (DeFi) risk management. Our services include:
+              Muscadine Labs LLC, a Wyoming limited liability company, provides comprehensive services focused on Bitcoin security, self-custody solutions, and decentralized finance (DeFi) risk management. Our services include:
             </p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
-              <li><strong>Risk Curation for Non-Custodial Vaults:</strong> We curate and manage risk for non-custodial vault services, evaluating protocols, assessing smart contract security, and providing guidance on safe DeFi participation</li>
+              <li><strong>Risk Curation for Non-Custodial Morpho Vaults:</strong> We curate and manage risk for non-custodial vault services, including Morpho vaults, evaluating protocols, assessing smart contract security, and providing guidance on safe DeFi participation</li>
               <li><strong>Bitcoin Security & Self-Custody:</strong> Educational resources and guidance on implementing secure Bitcoin self-custody solutions</li>
-              <li><strong>DeFi Protocol Access:</strong> Access to curated DeFi protocols including lending, borrowing, and yield generation services</li>
-              <li><strong>Bitcoin Node Services:</strong> Access to our self-hosted Bitcoin node for enhanced privacy and transaction validation</li>
+              <li><strong>DeFi Protocol Access:</strong> Access to curated DeFi protocols including Morpho vaults for lending, borrowing, and yield generation services</li>
+              <li><strong>Bitcoin Node Services:</strong> Access to our self-hosted Bitcoin node for enhanced privacy, transaction validation, and direct network connectivity</li>
               <li><strong>Educational Content:</strong> Comprehensive educational materials about cryptocurrency, blockchain technology, and decentralized finance</li>
             </ul>
             <p className="text-gray-700 mb-4">
@@ -59,7 +59,7 @@ const LegalPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Risk Curation for Non-Custodial Vaults</h2>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-4">
               <p className="text-blue-800 font-semibold mb-2">
-                <strong>OUR RISK CURATION SERVICE:</strong> Muscadine curates risk for non-custodial vault services by evaluating, assessing, and managing risks associated with DeFi protocols and smart contracts.
+                <strong>OUR RISK CURATION SERVICE:</strong> Muscadine Labs LLC curates risk for non-custodial vault services (including Morpho vaults) by evaluating, assessing, and managing risks associated with DeFi protocols and smart contracts.
               </p>
               <p className="text-blue-700 mb-2">
                 We conduct thorough due diligence on protocols, analyze smart contract security, monitor protocol health, and provide risk assessments to help users make informed decisions about non-custodial vault participation.
@@ -113,7 +113,7 @@ const LegalPage: React.FC = () => {
               <li>You will conduct your own research and due diligence before participating in any protocol or vault</li>
               <li>You should consult with qualified financial professionals before making any financial decisions</li>
               <li>You understand the risks associated with Bitcoin, cryptocurrency, and DeFi protocols</li>
-              <li>You will not hold Muscadine liable for any financial losses, including losses incurred despite our risk curation</li>
+                <li>You will not hold Muscadine Labs LLC liable for any financial losses, including losses incurred despite our risk curation</li>
               <li>You accept full responsibility for your decisions to participate in any non-custodial vault or DeFi protocol</li>
               <li>You will maintain proper security practices for your digital assets and wallet credentials</li>
               <li>You will verify all transaction details and protocol addresses before interacting with smart contracts</li>
@@ -171,7 +171,7 @@ const LegalPage: React.FC = () => {
               <li><strong>Tax Implications:</strong> Tax reporting requirements and potential tax liabilities</li>
               <li><strong>Risk Curation Limitations:</strong> Our risk curation does not eliminate these risks and cannot guarantee safety</li>
             </ul>
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded mt-4">
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-sm mt-4">
               <p className="text-red-800 font-semibold">
                 <strong>WARNING:</strong> Participation in DeFi protocols and non-custodial vaults can result in total loss of your assets. 
                 Never invest more than you can afford to lose.
@@ -182,7 +182,7 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Limitation of Liability</h2>
             <p className="text-gray-700 font-semibold mb-4">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, MUSCADINE SHALL NOT BE LIABLE FOR:
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, MUSCADINE LABS LLC SHALL NOT BE LIABLE FOR:
             </p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li>Any direct, indirect, incidental, or consequential damages</li>
@@ -208,7 +208,7 @@ const LegalPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. No Professional Relationship</h2>
             <p className="text-gray-700 mb-4">
               No professional relationship (financial advisor, investment advisor, attorney, or other) is created 
-              between you and Muscadine through the use of our services. Our risk curation services and educational 
+              between you and Muscadine Labs LLC through the use of our services. Our risk curation services and educational 
               content are provided for informational purposes only and do not constitute financial, investment, or legal advice.
             </p>
             <p className="text-gray-700 mb-4">
@@ -236,7 +236,7 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Indemnification</h2>
             <p className="text-gray-700 mb-4">
-              You agree to indemnify and hold harmless Muscadine from any claims, damages, or expenses arising 
+              You agree to indemnify and hold harmless Muscadine Labs LLC from any claims, damages, or expenses arising 
               from your use of our services or violation of these terms.
             </p>
           </section>
@@ -244,8 +244,8 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
             <p className="text-gray-700 mb-4">
-              This disclaimer is governed by the laws of the United States. Any disputes shall be resolved 
-              in the courts of the United States.
+              Muscadine Labs LLC is registered in Wyoming, USA. This disclaimer is governed by the laws of the 
+              State of Wyoming and the United States. Any disputes shall be resolved in the courts of Wyoming.
             </p>
           </section>
 
@@ -261,6 +261,8 @@ const LegalPage: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">15. Contact Information</h2>
             <div className="bg-gray-50 p-6 rounded-lg mb-4">
               <p className="text-gray-700 mb-2">If you have questions about this legal disclaimer, please contact us:</p>
+              <p className="text-gray-700"><strong>Company:</strong> Muscadine Labs LLC</p>
+              <p className="text-gray-700"><strong>Registered:</strong> Wyoming, USA</p>
               <p className="text-gray-700"><strong>Email:</strong> muscadinelabs@gmail.com</p>
               <p className="text-gray-700"><strong>Website:</strong> muscadine.io</p>
             </div>

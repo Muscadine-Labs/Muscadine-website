@@ -423,7 +423,7 @@ const Prism: React.FC<PrismProps> = ({
       if (animationType === 'hover') {
         if (onPointerMove) window.removeEventListener('pointermove', onPointerMove);
         window.removeEventListener('mouseleave', onLeave);
-        window.removeEventListener('blur', onBlur);
+        window.removeEventListener('blur-sm', onBlur);
       }
       if (suspendWhenOffscreen) {
         const io = (container as PrismContainer).__prismIO as IntersectionObserver | undefined;

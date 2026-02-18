@@ -73,16 +73,16 @@ const CountUpAnimation = ({ target, duration = 2000, suffix = '', prefix = '' }:
 
   return (
     <div ref={ref} className="flex-1">
-      <h2 className="text-6xl lg:text-7xl font-light text-gray-900 mb-2 font-serif">
+      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 mb-2 font-serif">
         {prefix && (
-          <span className="text-4xl lg:text-5xl">{prefix}</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl">{prefix}</span>
         )}
         {isVisible ? formatNumber(count) : '0'}
         {needsSmallUnit && (
-          <span className="text-4xl lg:text-5xl">{unit}</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl">{unit}</span>
         )}
         {suffix && (
-          <span className="text-4xl lg:text-5xl">{suffix}</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl">{suffix}</span>
         )}
       </h2>
     </div>
@@ -93,26 +93,23 @@ const MuscadineHome = () => {
   return (
     <>
       {/* Hero Section - Full Width Background */}
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-20">
-        {/* Nested rectangles effect */}
-        <div className="absolute inset-0 flex items-center justify-center z-0">
-          
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen mt-20 mb-20 overflow-x-clip">
+        {/* Nested rectangles effect - hidden on mobile; frames step outward from main content on desktop */}
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-10 pointer-events-none">
+          {/* Rectangle 4 - outermost frame (wider than main content) */}
+          <div className="w-full max-w-[1240px] h-[780px] border-2 border-black rounded-lg" />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          {/* Rectangle 4 */}
-          <div className="w-full max-w-[81rem] h-[780px] border-2 border-black rounded-lg"></div>
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-20 pointer-events-none">
           {/* Rectangle 3 */}
-          <div className="w-full max-w-[78rem] h-[740px] border-2 border-black rounded-lg"></div>
+          <div className="w-full max-w-[1196px] h-[740px] border-2 border-black rounded-lg" />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center z-30">
-          {/* Rectangle 2 */}
-          <div className="w-full max-w-[75rem] h-[700px] border-2 border-black rounded-lg"></div>
+        <div className="absolute inset-0 hidden lg:flex items-center justify-center z-30 pointer-events-none">
+          {/* Rectangle 2 - innermost frame, fits around main content (1152px) */}
+          <div className="w-full max-w-[1168px] h-[700px] border-2 border-black rounded-lg" />
         </div>
         
-        {/* Main hero container */}
-        <div className="relative py-20 px-20 mx-auto max-w-6xl border-2 border-black rounded-lg z-40">
+        {/* Main hero container - max-w-6xl = 1152px, fits inside innermost frame */}
+        <div className="relative py-8 px-4 sm:py-12 sm:px-8 lg:py-20 lg:px-20 mx-auto max-w-6xl border-2 border-black rounded-lg z-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="space-y-6 text-center lg:text-left">
@@ -156,7 +153,7 @@ const MuscadineHome = () => {
 
           {/* Right side - 3D Animation */}
           <div className="flex items-center justify-center">
-            <div className="w-full min-w-[400px] h-[400px] lg:h-[500px]">
+            <div className="w-full min-h-[300px] h-[300px] sm:h-[400px] lg:min-w-[400px] lg:h-[500px]">
               <IsometricNodes />
             </div>
           </div>
@@ -165,9 +162,9 @@ const MuscadineHome = () => {
       </div>
 
       {/* Stats & Solutions Section - Full Width Background with Gradient - Break out of container */}
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 py-20 my-16">
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-x-hidden bg-linear-to-b from-gray-50 via-blue-50 to-gray-50 py-12 md:py-20 my-12 md:my-16">
         {/* Stats Section */}
-        <div className="max-w-6xl mx-auto px-4 mb-32">
+        <div className="max-w-6xl mx-auto px-4 mb-16 md:mb-32">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center">
               {/* Stat 1 - Clients */}
               <div className="flex-1">
@@ -211,7 +208,7 @@ const MuscadineHome = () => {
         {/* Our Solutions Section */}
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-light text-gray-900 mb-6 font-serif">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-gray-900 mb-6 font-serif">
               Our Solutions
             </h2>
           </div>
@@ -220,7 +217,7 @@ const MuscadineHome = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Service 1 - Our App (Top Left) */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-6 sm:p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -248,7 +245,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 2 - Bitcoin Node (Top Right) */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-6 sm:p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -274,7 +271,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 3 - Self Custody (Bottom Left) */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-6 sm:p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -300,7 +297,7 @@ const MuscadineHome = () => {
             </div>
 
             {/* Service 4 - Other Solutions (Bottom Right) */}
-            <div className="bg-white rounded-lg border-2 border-gray-200 p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white rounded-lg border-2 border-gray-200 p-6 sm:p-8 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="space-y-6">
                 {/* 3D Shape Container */}
                 <div className="w-full h-48 bg-gray-50 rounded-lg border border-gray-200">
@@ -330,9 +327,9 @@ const MuscadineHome = () => {
       </div>
 
       {/* Meet Our Team Section */}
-      <div className="py-20 px-20 mb-8 rounded-lg mx-4 border-2 border-black">
+      <div className="py-8 px-4 sm:py-12 sm:px-8 lg:py-20 lg:px-20 mb-8 rounded-lg mx-4 border-2 border-black">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-5xl lg:text-6xl font-light text-gray-900 mb-8 font-serif">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-gray-900 mb-8 font-serif">
             Meet Our Team
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
@@ -350,36 +347,41 @@ const MuscadineHome = () => {
         </div>
       </div>
 
-      {/* Crypto Vault Section - Full Width Dark Blue Background with Slanted Top */}
-      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-        {/* PixelBlast OGL background with slanted top */}
+      {/* Analytics / Curator Section */}
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-x-hidden">
         <div className="absolute inset-0 bg-gray-900" 
              style={{ clipPath: 'polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)' }}>
           <div style={{ width: '100%', height: '100%', position: 'relative' }}>
             <PixelBlast />
           </div>
         </div>
-        
-        <div className="relative py-60 mt-16">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-5xl lg:text-6xl font-light text-white mb-8 font-serif">
-            Introducing Our Crypto Vault
-          </h2>
-          <p className="text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-8">
-            Store your digital assets securely while earning competitive interest rates. Our new crypto vault, built on Morpho's robust infrastructure, provides institutional-grade security with the convenience of DeFi yield farming. Your assets are protected by advanced smart contracts and multi-signature wallets, ensuring both security and growth potential.
-          </p>
-          
-          <a 
-            href="https://app.muscadine.io" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-12 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"
-          >
-            Try Out Our App
-            <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+        <div className="relative py-16 md:py-20 mt-12 md:mt-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl sm:text-3xl font-light text-white mb-4 font-serif">
+              Analytics &amp; Curator
+            </h2>
+            <p className="text-gray-200 leading-relaxed mb-6">
+              Explore metrics, dashboards, and curated insights at{' '}
+              <a 
+                href="https://curator.muscadine.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white font-medium underline underline-offset-2 hover:no-underline"
+              >
+                curator.muscadine.io
+              </a>
+            </p>
+            <a 
+              href="https://curator.muscadine.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
+            >
+              Open Curator
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
