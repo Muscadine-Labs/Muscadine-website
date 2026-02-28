@@ -113,7 +113,7 @@ export default function MuscadineFooter() {
                 Documentation
               </a>
               <a 
-                href="https://curator.muscadine.io" 
+                href="https://analytics.muscadine.io" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"

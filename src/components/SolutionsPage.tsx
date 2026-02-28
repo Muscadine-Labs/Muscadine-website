@@ -111,29 +111,29 @@ const SolutionsPage = () => {
 
         </div>
 
-        {/* Analytics / Curator Section */}
+        {/* Analytics Section */}
         <div className="mt-12 py-8 px-6 rounded-lg border-2 border-gray-200 text-center">
           <h3 className="text-xl font-light text-gray-900 mb-3 font-serif">
-            Analytics &amp; Curator
+            Analytics
           </h3>
           <p className="text-gray-600 text-sm leading-relaxed max-w-xl mx-auto mb-4">
-            Explore metrics, dashboards, and curated insights at{' '}
+            Explore metrics and dashboards at{' '}
             <a 
-              href="https://curator.muscadine.io" 
+              href="https://analytics.muscadine.io" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-700 font-medium"
             >
-              curator.muscadine.io
+              analytics.muscadine.io
             </a>
           </p>
           <a 
-            href="https://curator.muscadine.io" 
+            href="https://analytics.muscadine.io" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-2.5 border-2 border-gray-300 text-gray-900 font-medium rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 text-sm"
           >
-            Open Curator
+            Open Analytics
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
