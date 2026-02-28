@@ -11,12 +11,12 @@ const PrivacyPage: React.FC = () => {
           <h1 className="text-4xl font-light text-gray-900 mb-4 font-serif border-b-2 border-gray-200 pb-4">
             Privacy Policy
           </h1>
-          <p className="text-gray-600 italic mb-8">Last updated: January 2026</p>
+          <p className="text-gray-600 italic mb-8">Last updated: March 2026</p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Information We Collect</h2>
             <p className="text-gray-700 mb-4">
-              Muscadine Labs LLC ("we," "our," or "us"), a Wyoming limited liability company, is committed to protecting your privacy. We collect minimal information necessary to provide our services, which include risk curation for non-custodial Morpho vaults, Bitcoin security guidance, Bitcoin node connectivity, DeFi protocol access, and educational content:
+              Muscadine Labs LLC ("we," "our," or "us"), a limited liability company, is committed to protecting your privacy. We collect minimal information necessary to provide our services, which include risk curation for non-custodial Morpho vaults, Bitcoin security guidance, Bitcoin node connectivity, DeFi protocol access, and educational content:
             </p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li><strong>Contact Information:</strong> Email addresses provided voluntarily through contact forms or service inquiries</li>
@@ -139,7 +139,6 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-gray-50 p-6 rounded-lg mb-4">
               <p className="text-gray-700 mb-2">If you have questions about this Privacy Policy, please contact us:</p>
               <p className="text-gray-700"><strong>Company:</strong> Muscadine Labs LLC</p>
-              <p className="text-gray-700"><strong>Registered:</strong> Wyoming, USA</p>
               <p className="text-gray-700"><strong>Email:</strong> muscadinelabs@gmail.com</p>
               <p className="text-gray-700"><strong>Website:</strong> muscadine.io</p>
             </div>

@@ -80,17 +80,9 @@ export default [
       'react-hooks': reactHooks,
     },
   },
-  {
-    files: ['**/sw.js', '**/public/sw.js'],
-    languageOptions: {
-      globals: {
-        ...globals.serviceworker,
-      },
-    },
-  },
   prettier,
   {
-    ignores: ['.next', 'dist', 'node_modules', '*.config.js', '*.config.ts', 'performance-monitor.js'],
+    ignores: ['.next', 'dist', 'node_modules', '*.config.js', '*.config.ts'],
   },
 ];
 
