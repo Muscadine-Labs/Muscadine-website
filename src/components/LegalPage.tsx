@@ -11,7 +11,7 @@ const LegalPage: React.FC = () => {
           <h1 className="text-4xl font-light text-gray-900 mb-4 font-serif border-b-2 border-gray-200 pb-4">
             Legal Disclaimer
           </h1>
-          <p className="text-gray-600 italic mb-8">Last updated: January 2026</p>
+          <p className="text-gray-600 italic mb-8">Last updated: March 2026</p>
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
             <h2 className="text-xl font-semibold text-yellow-800 mb-2">⚠️ IMPORTANT LEGAL NOTICE</h2>
@@ -23,7 +23,7 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Our Services</h2>
             <p className="text-gray-700 mb-4">
-              Muscadine Labs LLC, a Wyoming limited liability company, provides comprehensive services focused on Bitcoin security, self-custody solutions, and decentralized finance (DeFi) risk management. Our services include:
+              Muscadine Labs LLC, a limited liability company, provides comprehensive services focused on Bitcoin security, self-custody solutions, and decentralized finance (DeFi) risk management. Our services include:
             </p>
             <ul className="text-gray-700 list-disc list-inside space-y-2 mb-4">
               <li><strong>Risk Curation for Non-Custodial Morpho Vaults:</strong> We curate and manage risk for non-custodial vault services, including Morpho vaults, evaluating protocols, assessing smart contract security, and providing guidance on safe DeFi participation</li>
@@ -244,8 +244,7 @@ const LegalPage: React.FC = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
             <p className="text-gray-700 mb-4">
-              Muscadine Labs LLC is registered in Wyoming, USA. This disclaimer is governed by the laws of the 
-              State of Wyoming and the United States. Any disputes shall be resolved in the courts of Wyoming.
+              This disclaimer is governed by the laws of the United States. Any disputes shall be resolved in courts of competent jurisdiction.
             </p>
           </section>
 
@@ -262,7 +261,6 @@ const LegalPage: React.FC = () => {
             <div className="bg-gray-50 p-6 rounded-lg mb-4">
               <p className="text-gray-700 mb-2">If you have questions about this legal disclaimer, please contact us:</p>
               <p className="text-gray-700"><strong>Company:</strong> Muscadine Labs LLC</p>
-              <p className="text-gray-700"><strong>Registered:</strong> Wyoming, USA</p>
               <p className="text-gray-700"><strong>Email:</strong> muscadinelabs@gmail.com</p>
               <p className="text-gray-700"><strong>Website:</strong> muscadine.io</p>
             </div>
