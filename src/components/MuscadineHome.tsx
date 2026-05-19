@@ -326,27 +326,6 @@ const MuscadineHome = () => {
         </div>
       </div>
 
-      {/* Meet Our Team Section */}
-      <div className="py-8 px-4 sm:py-12 sm:px-8 lg:py-20 lg:px-20 mb-8 rounded-lg mx-4 border-2 border-black">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-gray-900 mb-8 font-serif">
-            Meet Our Team
-          </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
-            We're a dedicated team focused on security and sustainable growth in crypto. Our mission is to empower individuals with the knowledge and tools needed to safely navigate the digital asset landscape.
-          </p>
-          <a 
-            href="/about" 
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300"
-          >
-            Learn More About Us
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
       {/* Analytics Section */}
       <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-x-hidden">
         <div className="absolute inset-0 bg-gray-900" 

@@ -149,34 +149,6 @@ const AboutPage = () => {
           </div>
         </div>
 
-        {/* Contact CTA Section */}
-        <div className="py-16 text-center">
-          <h2 className="text-4xl font-light text-gray-900 mb-6 font-serif">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help secure your digital assets and guide you through your crypto journey.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://app.muscadine.io" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-gray-900 hover:border-gray-800 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
-            >
-              Open App
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
       </main>
     </>
   );

@@ -11,7 +11,7 @@ const PrivacyPage: React.FC = () => {
           <h1 className="text-4xl font-light text-gray-900 mb-4 font-serif border-b-2 border-gray-200 pb-4">
             Privacy Policy
           </h1>
-          <p className="text-gray-600 italic mb-8">Last updated: March 2026</p>
+          <p className="text-gray-600 italic mb-8">Last updated: May 2026</p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Information We Collect</h2>
