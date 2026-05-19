@@ -11,7 +11,7 @@ const TermsPage: React.FC = () => {
           <h1 className="text-4xl font-semibold text-gray-900 mb-4 text-center font-serif">
             Terms of Service
           </h1>
-          <p className="text-gray-600 mb-8 text-center"><strong>Last updated:</strong> March 2026</p>
+          <p className="text-gray-600 mb-8 text-center"><strong>Last updated:</strong> May 2026</p>
 
           <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-8 rounded-sm">
             <p className="text-yellow-800 font-semibold">
